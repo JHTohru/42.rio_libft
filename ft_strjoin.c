@@ -19,6 +19,8 @@ char	*ft_strjoin(const char *pref, const char *suff)
 	size_t	plen;
 	size_t	slen;
 
+	if (pref == NULL || suff == NULL)
+		return (NULL);
 	plen = ft_strlen(pref);
 	slen = ft_strlen(suff);
 	str = (char *)malloc(plen + slen + 1);

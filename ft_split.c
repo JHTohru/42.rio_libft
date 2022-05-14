@@ -39,6 +39,8 @@ char	**ft_split(const char *str, char c)
 	size_t		i;
 	const char	*start;
 
+	if (str == NULL)
+		return (NULL);
 	tokens = ft_calloc(count_tokens(str, c) + 1, sizeof(char *));
 	if (tokens != NULL)
 	{

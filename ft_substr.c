@@ -19,6 +19,8 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	size_t	size;
 	size_t	i;
 
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (i < start && str[i] != '\0')
 		i++;

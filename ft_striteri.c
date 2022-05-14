@@ -16,6 +16,8 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
+	if (str == NULL)
+		return ;
 	i = 0;
 	while (str[i] != '\0')
 	{

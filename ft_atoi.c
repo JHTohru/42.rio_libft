@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 static int	ft_isspace(int c)
 {
@@ -29,8 +30,8 @@ static int	ft_issign(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
-	int	n;
+	int			sign;
+	long int	n;
 
 	while (ft_isspace(*nptr))
 		nptr++;
@@ -45,6 +46,10 @@ int	ft_atoi(const char *nptr)
 	while (ft_isdigit(*nptr))
 	{
 		n = n * 10 + (*nptr - '0') * sign;
+		if (sign == -1 && n > 0)
+			return (0);
+		else if (sign == 1 && n < 0)
+			return (-1);
 		nptr++;
 	}
 	return (n);
