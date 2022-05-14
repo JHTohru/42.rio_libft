@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 23:13:08 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/06 11:51:57 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/14 09:52:38 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	*ft_memrcpy(void *dst, const void *src, size_t n)
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (dst > src && (size_t)(dst - src) < n)
+	if (dst > src)
 		return (ft_memrcpy(dst, src, n));
 	return (ft_memcpy(dst, src, n));
 }
