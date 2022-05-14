@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:43:11 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/07 00:05:07 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:56:36 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+char	*ft_strnew(size_t size);
 
 #endif
