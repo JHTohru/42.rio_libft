@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 00:03:53 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/05 00:05:51 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:30:20 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
-	if (str == NULL)
-		return ;
 	i = 0;
 	while (str[i] != '\0')
 	{

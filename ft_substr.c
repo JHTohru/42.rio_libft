@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 02:37:29 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/06 10:20:43 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:23:50 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	size_t	size;
 	size_t	i;
 
-	if (str == NULL)
-		return (NULL);
 	i = 0;
 	while (i < start && str[i] != '\0')
 		i++;

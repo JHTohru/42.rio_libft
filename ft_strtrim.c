@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 12:44:56 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/06 10:59:06 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:25:14 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strtrim(const char *str, const char *set)
 	size_t	len;
 	size_t	i;
 
-	if (str == NULL || set == NULL)
-		return (NULL);
 	start = 0;
 	while (ft_strchr(set, str[start]) != NULL && str[start] != '\0')
 		start++;

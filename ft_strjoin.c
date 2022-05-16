@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 03:09:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/01 03:30:07 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:24:06 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strjoin(const char *pref, const char *suff)
 	size_t	plen;
 	size_t	slen;
 
-	if (pref == NULL || suff == NULL)
-		return (NULL);
 	plen = ft_strlen(pref);
 	slen = ft_strlen(suff);
 	str = (char *)malloc(plen + slen + 1);

@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 02:23:01 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/06 23:04:14 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:26:26 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ char	**ft_split(const char *str, char c)
 	size_t		i;
 	const char	*start;
 
-	if (str == NULL)
-		return (NULL);
 	tokens = ft_calloc(count_tokens(str, c) + 1, sizeof(char *));
 	if (tokens != NULL)
 	{

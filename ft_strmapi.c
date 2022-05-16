@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 23:56:54 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/06 11:11:45 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:26:53 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strmapi(const char *str, char (*f)(unsigned int, char))
 	char	*mstr;
 	size_t	i;
 
-	if (str == NULL)
-		return (NULL);
 	mstr = ft_calloc(ft_strlen(str) + 1, sizeof(char));
 	if (mstr != NULL)
 	{
