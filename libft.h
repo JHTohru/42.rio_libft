@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:43:11 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/14 12:57:39 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/19 01:07:08 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,10 @@ typedef struct s_list
 
 char	*ft_strnew(size_t size);
 
+void	ft_strdel(char **str);
+
 char	*ft_ptoa(void *p);
+
+char	*ft_strndup(const char *src, size_t len);
 
 #endif
