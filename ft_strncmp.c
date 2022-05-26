@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 11:54:06 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/05 23:27:34 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/26 02:01:32 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	int		diff;
 
 	i = 0;
-	while (i < n)
+	while (1)
 	{
 		diff = (unsigned char)str1[i] - (unsigned char)str2[i];
-		if (diff != 0 || str1[i] == '\0')
+		if (diff != 0 || str1[i] == '\0' || i++ == n)
 			return (diff);
-		i++;
 	}
-	return (0);
 }
