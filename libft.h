@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
+/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:43:11 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/21 17:55:44 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/05/21 18:36:25 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,7 @@ void	ft_strdel(char **str);
 char	*ft_ptoa(void *p);
 
 char	*ft_strndup(const char *src, size_t len);
+
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 
 #endif
