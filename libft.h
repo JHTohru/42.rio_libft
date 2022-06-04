@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:43:11 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/05/07 00:05:07 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/01 10:04:33 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,28 @@ char	*ft_strrchr(const char *str, int c);
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
+
+
 void	*ft_memchr(const void *s, int c, size_t n);
+
+/*******************************************************************************
+
+DESCRIPTION
+
+The memchr function locates the first occurrence of c (converted to an unsigned
+char) in the initial n characters (each interpreted as unsigned char) of the
+object pointed to by s. The implementation shall behave as if it reads the
+characters sequentially and stops as soon as a matching character is found.
+
+
+RETURNS
+
+The memchr function returns a pointer to the located character, or a null
+pointer if the character does not occur in the object.
+
+*******************************************************************************/
+
+
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
