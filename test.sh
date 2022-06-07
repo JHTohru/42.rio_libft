@@ -7,6 +7,6 @@ auxfiles="${testsdir}/test_utils.c"
 libfile="./libft.a"
 
 gcc -Wall -Wextra -Werror -o "$execfile" \
-	-I "$testsdir" -I ./ \
+	-I "$testsdir" \
 	"$testfile" "$auxfiles" "$libfile" \
 	&& "$execfile"
