@@ -6,11 +6,10 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 13:49:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 11:14:32 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:24:51 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_utils.h"
 #include <stdio.h>
 #include <string.h>

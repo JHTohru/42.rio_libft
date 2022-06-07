@@ -6,7 +6,7 @@
 
 |Tested Function|Documentation|Tests|Format|
 |---------------|----|-----|------|
-|ft_isalpha|OK|OK|Pending|
+|ft_isalpha|OK|OK|OK|
 |ft_isdigit|OK|OK|Pending|
 |ft_isalnum|OK|OK|Pending|
 |ft_isascii|OK|OK|Pending|
