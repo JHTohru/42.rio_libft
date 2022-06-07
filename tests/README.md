@@ -19,7 +19,7 @@
 |ft_toupper|Pending|Pending|Pending|
 |ft_strlcpy|Pending|Pending|Pending|
 |ft_strlcat|Pending|Pending|Pending|
-|ft_tolower|OK|OK|Pending|
+|ft_tolower|OK|OK|OK|
 |ft_strchr|OK|OK|Pending|
 |ft_strrchr|Pending|Pending|Pending|
 |ft_strncmp|Pending|Pending|Pending|
