@@ -6,12 +6,12 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:54:37 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 13:03:00 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:43:22 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_utils.h"
+#include <stddef.h>
 #include <string.h>
 
 void	ft_bzero(void *s, size_t n);

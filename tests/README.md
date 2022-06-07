@@ -13,7 +13,7 @@
 |ft_isprint|OK|OK|OK|
 |ft_strlen|OK|OK|OK|
 |ft_memset|OK|OK|OK|
-|ft_bzero|OK|OK|Pending|
+|ft_bzero|OK|OK|OK|
 |ft_memcpy|Pending|OK|Pending|
 |ft_memmove|Pending|Pending|Pending|
 |ft_toupper|Pending|Pending|Pending|
