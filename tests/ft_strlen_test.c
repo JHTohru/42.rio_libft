@@ -6,12 +6,12 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:06:22 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 12:10:21 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:41:46 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_utils.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s);
 /* ************************************************************************** */
