@@ -1,4 +1,5 @@
 ToDo:
+- Substituir importação da string.h pela stddef.h
 - Padronizar nomes de variáveis.
   - Considerar a situação de ft_memmove__test.c, onde o nome dos argumentos é
     referenciado nos testes. Nesse caso, fica clara a necessidade de que esses
