@@ -14,7 +14,7 @@
 |ft_strlen|OK|OK|OK|
 |ft_memset|OK|OK|OK|
 |ft_bzero|OK|OK|OK|
-|ft_memcpy|Pending|OK|Pending|
+|ft_memcpy|OK|OK|OK|
 |ft_memmove|Pending|Pending|Pending|
 |ft_toupper|OK|OK|OK|
 |ft_tolower|OK|OK|OK|
