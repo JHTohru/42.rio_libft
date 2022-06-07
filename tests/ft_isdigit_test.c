@@ -6,13 +6,14 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:41:06 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 10:45:34 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 11:44:56 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 #include <stdio.h>
+#include <string.h>
 
 int		ft_isdigit(int c);
 
@@ -33,21 +34,23 @@ int		ft_isdigit(int c);
 /*                                                                            */
 /* ************************************************************************** */
 
+// The ft_isdigit must return true when the argument is a digit character and
+// false otherwise.
 int	test_ft_isdigit(void)
 {
-	int	c;
+	char	digit_chars[] = "0123456789";
+	char	not_digit_chars[] = "!\"#$%&'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+	size_t	i;
 
 	if (ft_isdigit(EOF))
 		return (0);
-	c = 0;
-	while (c < '0')
-		if (ft_isdigit(c++))
+	i = 0;
+	while (i < strlen(digit_chars))
+		if (!ft_isdigit(digit_chars[i++]))
 			return (0);
-	while (c <= '9')
-		if (!ft_isdigit(c++))
-			return (0);
-	while (c < 256)
-		if (ft_isdigit(c++))
+	i = 0;
+	while (i < strlen(not_digit_chars))
+		if (ft_isdigit(not_digit_chars[i++]))
 			return (0);
 	return (1);
 }

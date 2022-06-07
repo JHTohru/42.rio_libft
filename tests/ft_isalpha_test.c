@@ -6,13 +6,14 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 13:49:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 10:46:45 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 11:14:32 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 #include <stdio.h>
+#include <string.h>
 
 int		ft_isalpha(int c);
 
@@ -40,25 +41,19 @@ int		ft_isalpha(int c);
 // and false otherwise.
 int	test_ft_isalpha(void)
 {
-	int	c;
+	char	alpha_chars[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char	not_alpha_chars[] = "!\"#$%&'()*+,-./0123456789:;<=>?@[\\]^_`{|}~";
+	size_t	i;
 
 	if (ft_isalpha(EOF))
 		return (0);
-	c = 0;
-	while (c < 'A')
-		if (ft_isalpha(c++))
+	i = 0;
+	while (i < strlen(alpha_chars))
+		if (!ft_isalpha(alpha_chars[i++]))
 			return (0);
-	while (c <= 'Z')
-		if (!ft_isalpha(c++))
-			return (0);
-	while (c < 'a')
-		if (ft_isalpha(c++))
-			return (0);
-	while (c <= 'z')
-		if (!ft_isalpha(c++))
-			return (0);
-	while (c < 256)
-		if (ft_isalpha(c++))
+	i = 0;
+	while (i < strlen(not_alpha_chars))
+		if (ft_isalpha(not_alpha_chars[i++]))
 			return (0);
 	return (1);
 }
