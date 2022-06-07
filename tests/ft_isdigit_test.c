@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:41:06 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/01 14:50:26 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 10:45:34 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ int		ft_isdigit(int c);
 /* 5.2.1).                                                                    */
 /*                                                                            */
 /* ************************************************************************** */
-/* *****                                                                ***** */
-/* *****  Taken from the C Programming Language International Standard  ***** */
-/* *****     Working draft — October 18, 2021 ISO/IEC 9899:202x (E)     ***** */
-/* *****   https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf   ***** */
-/* *****                                                                ***** */
+/*                                                                            */
+/* SOURCE                                                                     */
+/*                                                                            */
+/* The C Programming Language International Standard                          */
+/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
+/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
+/*                                                                            */
 /* ************************************************************************** */
 
 int	test_ft_isdigit(void)

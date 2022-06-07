@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 10:13:35 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/03 11:04:46 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 10:44:38 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_isascii(int c);
 /*                                                                            */
 /* ************************************************************************** */
 /*                                                                            */
-/* SOURCE:                                                                    */
+/* SOURCE                                                                     */
 /*                                                                            */
 /* The Open Group Base Specifications Issue 7, 2018 edition                   */
 /* IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008)                    */

@@ -6,7 +6,7 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 13:49:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/01 14:40:25 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 10:46:45 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,13 @@ int		ft_isalpha(int c);
 /* characters for which isupper or islower is true.                           */
 /*                                                                            */
 /* ************************************************************************** */
-/* *****                                                                ***** */
-/* *****  Taken from the C Programming Language International Standard  ***** */
-/* *****     Working draft — October 18, 2021 ISO/IEC 9899:202x (E)     ***** */
-/* *****   https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf   ***** */
-/* *****                                                                ***** */
+/*                                                                            */
+/* SOURCE                                                                     */
+/*                                                                            */
+/* The C Programming Language International Standard                          */
+/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
+/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
+/*                                                                            */
 /* ************************************************************************** */
 
 // The ft_isalpha must return true when the argument is an alphabetic character
