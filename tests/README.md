@@ -12,7 +12,7 @@
 |ft_isascii|OK|OK|OK|
 |ft_isprint|OK|OK|OK|
 |ft_strlen|OK|OK|OK|
-|ft_memset|OK|OK|Pending|
+|ft_memset|OK|OK|OK|
 |ft_bzero|OK|OK|Pending|
 |ft_memcpy|Pending|OK|Pending|
 |ft_memmove|Pending|Pending|Pending|

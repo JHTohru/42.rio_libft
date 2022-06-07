@@ -6,12 +6,12 @@
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:06:22 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/07 12:53:20 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:42:23 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_utils.h"
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n);
 
