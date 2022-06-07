@@ -4,7 +4,7 @@
 
 # Tests Status
 
-|Tested Function|Doc.|Tests|Format|
+|Tested Function|Documentation|Tests|Format|
 |---------------|----|-----|------|
 |ft_isalpha|OK|OK|Pending|
 |ft_isdigit|OK|OK|Pending|
@@ -14,13 +14,13 @@
 |ft_strlen|OK|OK|Pending|
 |ft_memset|OK|OK|Pending|
 |ft_bzero|OK|OK|Pending|
-|ft_memcpy|Pending|Pending|Pending|
+|ft_memcpy|Pending|OK|Pending|
 |ft_memmove|Pending|Pending|Pending|
 |ft_toupper|Pending|Pending|Pending|
 |ft_strlcpy|Pending|Pending|Pending|
 |ft_strlcat|Pending|Pending|Pending|
-|ft_tolower|Pending|Pending|Pending|
-|ft_strchr|Pending|Pending|Pending|
+|ft_tolower|OK|OK|Pending|
+|ft_strchr|OK|OK|Pending|
 |ft_strrchr|Pending|Pending|Pending|
 |ft_strncmp|Pending|Pending|Pending|
 |ft_memchr|Pending|Pending|Pending|
