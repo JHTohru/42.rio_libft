@@ -8,7 +8,7 @@
 |---------------|----|-----|------|
 |ft_isalpha|OK|OK|OK|
 |ft_isdigit|OK|OK|OK|
-|ft_isalnum|OK|OK|Pending|
+|ft_isalnum|OK|OK|OK|
 |ft_isascii|OK|OK|OK|
 |ft_isprint|OK|OK|Pending|
 |ft_strlen|OK|OK|Pending|
