@@ -1,83 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset_test.c                                   :+:      :+:    :+:   */
+/*   ft_memmove_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/07 12:06:22 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/08 10:51:11 by jmenezes         ###   ########.fr       */
+/*   Created: 2022/06/07 15:29:34 by jmenezes          #+#    #+#             */
+/*   Updated: 2022/06/08 10:51:15 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memmove(void *s1, const void *s2, size_t n);
 
 /* ************************************************************************** */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
-/* The memset function copies the value of c (converted to an unsigned char)  */
-/* into each of the first n characters of the object pointed to by s.         */
+/* The memmove function copies n characters from the object pointed to by s2  */
+/* into the object pointed to by s1. Copying takes place as if the n          */
+/* characters from the object pointed to by s2 are first copied into a        */
+/* temporary array of n characters that does not overlap the objects pointed  */
+/* to by s1 and s2, and then the n characters from the temporary array are    */
+/* copied into the object pointed to by s1.                                   */
 /*                                                                            */
 /*                                                                            */
-/* RETURNS                                                                    */
+/* RETURN                                                                     */
 /*                                                                            */
-/* The memset function returns the value of s.                                */
+/* The memmove function returns the value of s1.                              */
 /*                                                                            */
 /* ************************************************************************** */
 /*                                                                            */
 /* SOURCE                                                                     */
 /*                                                                            */
-/* The C Programming Language International Standard                          */
-/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
-/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
+/* The Open Group Base Specifications Issue 6                                 */
+/* IEEE Std 1003.1, 2004 Edition                                              */
+/* https://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// The ft_strlen must copy the value of c into each of the first n characters
-// of s.
-int	test_ft_memset_effect(void)
-{
-	char	s[10];
-	int		c1;
-	int		c2;
-	size_t	n;
-	size_t	i;
-
-	c1 = 'x';
-	c2 = 'y';
-	ft_memset((void *)s, c1, sizeof(s));
-	i = 0;
-	while (i < sizeof(s))
-		if (((unsigned char *)s)[i++] != c1)
-			return (0);
-	n = 3;
-	ft_memset((void *)s, c2, n);
-	i = 0;
-	while (i < n)
-		if (((unsigned char *)s)[i++] != c2)
-			return (0);
-	while (i < sizeof(s))
-		if (((unsigned char *)s)[i++] != c1)
-			return (0);
-	return (1);
-}
-
-// The ft_memset must return the given s parameter.
-int	test_ft_memset_return(void)
-{
-	void	*s;
-
-	s = (void *)42;
-	return (ft_memset(s, 0, 0) == s);
-}
-
-int	main(void)
-{
-	print_test_result("test_ft_memset_effect", test_ft_memset_effect());
-	print_test_result("test_ft_memset_return", test_ft_memset_return());
-	return (0);
-}
