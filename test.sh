@@ -9,7 +9,7 @@ libfile="./libft.a"
 
 mkdir -p "$bindir"
 
-gcc -Wall -Wextra -Werror -o "$execfile" \
-	-I "$testsdir" \
+cc -Wall -Wextra -Werror -o "$execfile" \
+	-I "$testsdir" -I ./ \
 	"$testfile" "$auxfiles" "$libfile" \
 	&& "$execfile"
