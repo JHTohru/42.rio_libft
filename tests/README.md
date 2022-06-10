@@ -16,10 +16,10 @@
 |ft_bzero|OK|
 |ft_memcpy|OK|
 |ft_memmove|Pending|
-|ft_toupper|OK|
-|ft_tolower|OK|
 |ft_strlcpy|Pending|
 |ft_strlcat|Pending|
+|ft_toupper|OK|
+|ft_tolower|OK|
 |ft_strchr|Pending|
 |ft_strrchr|Pending|
 |ft_strncmp|Pending|
