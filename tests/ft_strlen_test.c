@@ -6,15 +6,16 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:06:22 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:45:44 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-size_t	ft_strlen(const char *s);
 /* ************************************************************************** */
+/*                                                                            */
+/* size_t strlen(const char *s)                                               */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -39,11 +40,18 @@ size_t	ft_strlen(const char *s);
 // The ft_strlen must return the length of the given string.
 int	test_ft_strlen(void)
 {
-	return (ft_strlen("42") == 2 && ft_strlen("") == 0);
+	return (ft_strlen("42") == 2);
+}
+
+// The ft_strlen must return 0 for a empty string as parameter.
+int	test_ft_strlen_empty(void)
+{
+	return (ft_strlen("") == 0 && ft_strlen("\0it should be ignored") == 0);
 }
 
 int	main(void)
 {
 	print_test_result("test_ft_strlen", test_ft_strlen());
+	print_test_result("test_ft_strlen_empty", test_ft_strlen_empty());
 	return (0);
 }
