@@ -6,16 +6,16 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:06:22 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:46:50 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-void	*ft_memset(void *s, int c, size_t n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* void *ft_memset(void *s, int c, size_t n)                                  */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */

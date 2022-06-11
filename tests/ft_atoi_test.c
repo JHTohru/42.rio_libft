@@ -6,16 +6,16 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:36:26 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:42:24 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-int	ft_atoi(const char *nptr);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* int atoi(const char *nptr)                                                 */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */

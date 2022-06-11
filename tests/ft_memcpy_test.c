@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 13:42:49 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:48:28 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "test_utils.h"
 #include <string.h>
 
-void	*ft_memcpy(void *s1, const void *s2, size_t n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* void *memcpy(void *s1, const void *s2, size_t n)                           */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */

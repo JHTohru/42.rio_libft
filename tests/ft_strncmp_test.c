@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
+/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:28:13 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 16:48:18 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* int strncmp(const char *s1, const char *s2, size_t n)                      */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */

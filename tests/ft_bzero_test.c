@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:54:37 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:47:28 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "test_utils.h"
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* void ft_bzero(void *s, size_t n)                                           */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */

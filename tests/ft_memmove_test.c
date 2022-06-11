@@ -6,16 +6,17 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:29:34 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:13:45 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
-
-void	*ft_memmove(void *s1, const void *s2, size_t n);
+#include <string.h>
 
 /* ************************************************************************** */
+/*                                                                            */
+/* void *memmove(void *s1, const void *s2, size_t n)                          */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -40,3 +41,48 @@ void	*ft_memmove(void *s1, const void *s2, size_t n);
 /* https://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ft_memmove must copy the data from a memory area data to the other.
+int	test_ft_memmove_non_overlapping(void)
+{
+	int	a;
+	int	b;
+
+	a = 42;
+	ft_memmove((void *)&b, (void *)&a, sizeof(int));
+	return (a == b);
+}
+
+// ft_memmove must handle overlapping memory areas.
+int	test_ft_memmove_overlapping_desc(void)
+{
+	char	str1[] = "abc";
+	char	str2[] = "abc";
+
+
+	ft_memmove((void *)(str1 + 1), (void *)str1, 2);
+	ft_memmove((void *)str2, (void *)(str2 + 1), 2);
+	return (strcmp(str1, "aab") == 0 && strcmp(str2, "bcc") == 0);
+}
+
+// ft_memmove must take no effect when the number of bytes to be moved is zero.
+int	test_ft_memmove_zero_bytes(void)
+{
+	char	str[] = "abc";
+
+	ft_memmove((void *)str, (void *)"xxx", 0);
+	return (strcmp(str, "abc") == 0);
+}
+
+int	main(void)
+{
+	print_test_result("test_ft_memmove_non_overlapping",
+		test_ft_memmove_non_overlapping());
+	print_test_result("test_ft_memmove_overlapping_desc",
+		test_ft_memmove_overlapping_desc());
+	print_test_result("test_ft_memmove_overlapping_asc",
+		test_ft_memmove_overlapping_asc());
+	print_test_result("test_ft_memmove_zero_bytes",
+		test_ft_memmove_zero_bytes());
+	return (0);
+}
