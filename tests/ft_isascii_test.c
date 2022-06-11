@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
+/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 10:13:35 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:39:50 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "test_utils.h"
 #include <limits.h>
 
-int	ft_isascii(int c);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* int ft_isascii(int c)                                                      */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
