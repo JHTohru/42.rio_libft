@@ -6,16 +6,16 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:01:50 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:00:50 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* size_t strlcat(char *dst, const char *src, size_t dstsize)                 */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
