@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
+/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:48:59 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:39:00 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <stdio.h>
 #include <string.h>
 
-int		ft_isalnum(int c);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* int ft_isalnum(int c)                                                      */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
