@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
+/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 11:21:29 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/04/30 11:44:27 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 05:08:20 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (1)
 	{
-		if (*str == c)
+		if ((unsigned char)*str == c)
 			return ((char *)str);
 		if (*str == '\0')
 			return (NULL);

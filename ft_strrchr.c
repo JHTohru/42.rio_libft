@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
+/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 11:19:41 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/04/30 11:45:04 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 05:08:19 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *str, int c)
 		str++;
 	while (1)
 	{
-		if (*str == c)
+		if ((unsigned char)*str == c)
 			return ((char *)str);
 		if (str == start)
 			return (NULL);
