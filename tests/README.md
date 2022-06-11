@@ -15,8 +15,8 @@
 |ft_memset|OK|
 |ft_bzero|OK|
 |ft_memcpy|OK|
-|ft_memmove|Pending|
-|ft_strlcpy|Pending|
+|ft_memmove|OK|
+|ft_strlcpy|OK|
 |ft_strlcat|Pending|
 |ft_toupper|OK|
 |ft_tolower|OK|

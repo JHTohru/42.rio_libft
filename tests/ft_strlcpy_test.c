@@ -6,16 +6,17 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:31:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:54:49 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "test_utils.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+#include <string.h>
 
 /* ************************************************************************** */
+/*                                                                            */
+/* size_t strlcpy(char *dst, const char *src, size_t dstsize)                 */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -59,3 +60,55 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 /* https://usenix.org/legacy/event/usenix99/full_papers/millert/millert.pdf   */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ft_strlcpy must copy all the characters from the string src to the string dst
+// when the src length is less than the dstsize parameter value.
+int	test_ft_strlcpy_effect_regular(void)
+{
+	char	src[] = "abcdef";
+	char	dst[sizeof(src)];
+
+	ft_strlcpy(dst, src, sizeof(dst));
+	return (strcmp(dst, src) == 0);
+}
+
+// ft_strlcpy must copy up to dstsize - 1 bytes from the string src to the
+// string dst.
+int	test_ft_strlcpy_effect_truncation(void)
+{
+	char	src[] = "abcdef";
+	char	dst[sizeof(src) - 1];
+
+	ft_strlcpy(dst, src, sizeof(dst));
+	return (strcmp(dst, "abcde") == 0);
+}
+
+// ft_strlcpy must take no effect when dstsize is zero.
+int	test_ft_strlcpy_effect_zero_len(void)
+{
+	char	str[] = "abcde";
+
+	ft_strlcpy(str, "fghij", 0);
+	return (strcmp(str, "abcde") == 0);
+}
+
+// ft_strlcpy must return the length of the src string parameter.
+int	test_ft_strlcpy_return(void)
+{
+	char	dst[20];
+	char	src[] = "abcdef";
+
+	return (ft_strlcpy(dst, src, sizeof(dst)) == strlen(src));
+}
+
+int	main(void)
+{
+	print_test_result("test_ft_strlcpy_effect_regular",
+		test_ft_strlcpy_effect_regular());
+	print_test_result("test_ft_strlcpy_effect_truncation",
+		test_ft_strlcpy_effect_truncation());
+	print_test_result("test_ft_strlcpy_effect_zero_len",
+		test_ft_strlcpy_effect_zero_len());
+	print_test_result("test_ft_strlcpy_return", test_ft_strlcpy_return());
+	return (0);
+}
