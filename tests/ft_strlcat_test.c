@@ -6,12 +6,9 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:01:50 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 19:00:50 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 21:07:44 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include "test_utils.h"
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -57,3 +54,57 @@
 /* https://usenix.org/legacy/event/usenix99/full_papers/millert/millert.pdf   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+
+int	test_ft_strlcat_regular(void)
+{
+	char	want[] = "abcdefghij";
+	char	dst[sizeof(want)] = "abcde";
+	char	src[] = "fghij";
+
+	ft_strlcat(dst, src, sizeof(dst));
+	return (strcmp(dst, want) == 0);	
+}
+
+// ft_strlcat will write no character in dst if there is no room for it.
+int	test_ft_strlcat_no_write(void)
+{
+	char	odst[] = "abcde";
+	char	dst[] = "abcde";
+	char	src[] = "fghij";
+
+	strcpy(dst, src);
+	ft_strlcat(dst, src, sizeof(dst));
+	return (strcmp(dst, odst) == 0);
+}
+
+// ft_strlcat must not write more than dstsize - strlen(dst) - 1 characters
+// from src to dst.
+int	test_ft_strlcat_truncation(void)
+{
+	char	dst[7] = "abcde";
+	char	src[] = "fghij";
+
+	ft_strlcat(dst, src, sizeof(dst));
+	return (strcmp(dst, "abcdef") == 0);
+}
+
+int	test_ft_strlcat_return_regular(void)
+{
+	char	odst[] = "abcde";
+	char	src[] = "fghij";
+	char	dst[sizeof(odst) + sizeof(src) + 1];
+
+	strcpy(dst, odst);
+	return (ft_strlcat(dst, src, sizeof(dst)) == sizeof(odst) + sizeof(src));
+}
+
+int	test_ft_strlcat_return_truncation(void)
+{
+	char	dst[10];
+	char	src[] = "abcdefghijklmnopqrstuvwyz";
+
+	return (ft_strlcat(dst, src, sizeof(dst)) >= sizeof(dst));
+}

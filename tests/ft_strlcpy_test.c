@@ -6,17 +6,14 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:31:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 18:54:49 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:55:06 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include "test_utils.h"
-#include <string.h>
 
 /* ************************************************************************** */
 /*                                                                            */
 /* size_t strlcpy(char *dst, const char *src, size_t dstsize)                 */
+/*                                                                            */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -48,6 +45,32 @@
 /* If the return value is >= dstsize, the output string has been truncated.   */
 /* It is the caller's responsibility to handle this.                          */
 /*                                                                            */
+/*                                                                            */
+/*                           --------------------                             */
+/*                                                                            */
+/*                                                                            */
+/* int snprintf(char *s, size_t n, const char * restrict format, ...)         */
+/*                                                                            */
+/*                                                                            */
+/* DESCRIPTION                                                                */
+/*                                                                            */
+/* The snprintf function is equivalent to fprintf, except that the output is  */
+/* written into an array (specified by argument s)) rather than to a stream.  */
+/* If n is zero, nothing is written, and s may be a null pointer. Otherwise,  */
+/* output characters beyond the n-1st are discarded rather than being written */
+/* into the array. If copying takes plpace between objects that overlap, the  */
+/* behaviour is undefined.                                                    */
+/*                                                                            */
+/*                                                                            */
+/* RETURN                                                                     */
+/*                                                                            */
+/* The snprintf function returns the number of characters that would been     */
+/* written had n been sufficiently large, not counting the terminating null   */
+/* character, or a negative value if an encoding error ocurred. Thus, the     */
+/* null-terminated output has been completely written if and only if the      */
+/* returned value is both nonnegative and less than n.                        */
+/*                                                                            */
+/*                                                                            */
 /* ************************************************************************** */
 /*                                                                            */
 /* SOURCE                                                                     */
@@ -61,9 +84,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include "test_utils.h"
+#include <string.h>
+
 // ft_strlcpy must copy all the characters from the string src to the string dst
 // when the src length is less than the dstsize parameter value.
-int	test_ft_strlcpy_effect_regular(void)
+int	test_ft_strlcpy_regular(void)
 {
 	char	src[] = "abcdef";
 	char	dst[sizeof(src)];
@@ -74,7 +101,7 @@ int	test_ft_strlcpy_effect_regular(void)
 
 // ft_strlcpy must copy up to dstsize - 1 bytes from the string src to the
 // string dst.
-int	test_ft_strlcpy_effect_truncation(void)
+int	test_ft_strlcpy_truncation(void)
 {
 	char	src[] = "abcdef";
 	char	dst[sizeof(src) - 1];
@@ -83,13 +110,31 @@ int	test_ft_strlcpy_effect_truncation(void)
 	return (strcmp(dst, "abcde") == 0);
 }
 
-// ft_strlcpy must take no effect when dstsize is zero.
-int	test_ft_strlcpy_effect_zero_len(void)
+// ft_strlcpy must write no character if dstsize is zero.
+int	test_ft_strlcpy_no_write(void)
 {
 	char	str[] = "abcde";
 
 	ft_strlcpy(str, "fghij", 0);
 	return (strcmp(str, "abcde") == 0);
+}
+
+// ft_strlcpy accepts a null pointer as value for the dst parameter since
+// dstsize is zero.
+int	test_ft_strlcpy_null_parameter(void)
+{
+	ft_strlcpy(NULL, "abcde", 0);
+	// todo: check that no segmentation fault occurred
+	return (1);
+}
+
+// ft_strlcpy must NUL-terminate of the dst string if there is room.
+int	test_ft_strlcpy_nul_terminate(void)
+{
+	char	str[1] = {'x'};
+
+	ft_strlcpy(str, "", sizeof(str));
+	return (strcmp(str, "") == 0);
 }
 
 // ft_strlcpy must return the length of the src string parameter.
@@ -103,12 +148,12 @@ int	test_ft_strlcpy_return(void)
 
 int	main(void)
 {
-	print_test_result("test_ft_strlcpy_effect_regular",
-		test_ft_strlcpy_effect_regular());
-	print_test_result("test_ft_strlcpy_effect_truncation",
-		test_ft_strlcpy_effect_truncation());
-	print_test_result("test_ft_strlcpy_effect_zero_len",
-		test_ft_strlcpy_effect_zero_len());
+	print_test_result("test_ft_strlcpy_regular", test_ft_strlcpy_regular());
+	print_test_result("test_ft_strlcpy_truncation",
+		test_ft_strlcpy_truncation());
+	print_test_result("test_ft_strlcpy_nul_terminate",
+		test_ft_strlcpy_nul_terminate());
+	print_test_result("test_ft_strlcpy_no_write", test_ft_strlcpy_no_write());
 	print_test_result("test_ft_strlcpy_return", test_ft_strlcpy_return());
 	return (0);
 }
