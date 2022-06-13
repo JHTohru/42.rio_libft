@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:31:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 19:55:06 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/13 18:56:06 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,11 @@
 /*                                                                            */
 /* Proceedings of the FREENIX Track, 1999 USENIX Annual Technical Conference  */
 /* https://usenix.org/legacy/event/usenix99/full_papers/millert/millert.pdf   */
+/*                                                                            */
+/*                                                                            */
+/* The C Programming Language International Standard                          */
+/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
+/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
 /*                                                                            */
 /* ************************************************************************** */
 
