@@ -29,7 +29,7 @@
 |ft_atoi|Pending|
 |ft_calloc|OK|
 |ft_strdup|OK|
-|ft_substr|Pending|
+|ft_substr|OK|
 |ft_strjoin|Pending|
 |ft_strtrim|Pending|
 |ft_split|Pending|
