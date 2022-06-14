@@ -6,14 +6,9 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 05:54:41 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 01:36:38 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 01:38:06 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include "test_utils.h"
-#include <errno.h>
-#include <stdlib.h>
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -39,6 +34,11 @@
 /* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+#include <errno.h>
+#include <stdlib.h>
 
 // The ft_calloc function must return null if the requested amount of memory is
 // not available. int	test_ft_calloc_nomem(test_ft_calloc_nomemd)
