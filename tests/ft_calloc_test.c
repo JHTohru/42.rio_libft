@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 05:54:41 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 01:36:38 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <errno.h>
 #include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* void *calloc(size_t nmemb, size_t size)                                    */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
