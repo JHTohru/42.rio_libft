@@ -23,7 +23,7 @@
 |ft_strchr|OK|
 |ft_strrchr|OK|
 |ft_strncmp|OK|
-|ft_memchr|Pending|
+|ft_memchr|OK|
 |ft_memcmp|Pending|
 |ft_strnstr|Pending|
 |ft_atoi|Pending|

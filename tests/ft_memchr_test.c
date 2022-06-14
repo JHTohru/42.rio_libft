@@ -6,16 +6,13 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:30:57 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 03:01:24 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "test_utils.h"
-
-void	*ft_memchr(const void *s, int c, size_t n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* void *memchr(const void *s, int c, size_t n)                               */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -35,8 +32,36 @@ void	*ft_memchr(const void *s, int c, size_t n);
 /*                                                                            */
 /* SOURCE                                                                     */
 /*                                                                            */
-/* The Open Group Base Specifications Issue 6                                 */
-/* IEEE Std 1003.1, 2004 Edition                                              */
-/* https://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html       */
+/* The C Programming Language International Standard                          */
+/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
+/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+
+// ft_memchr must return a pointer to the address of the first occurrence of c
+// in s.
+int test_ft_memchr_success(void)
+{
+    char    s[] = "abcdeabcdeabcdeabcde";
+
+    return (ft_memchr((void *)s, 'e', sizeof(s)) == s + 4);
+}
+
+// ft_memchr must return a null pointer if no occurrence of the parameter c was
+// found in s.
+int test_ft_memchr_failure(void)
+{
+    char    s[] = "abcde";
+
+    return (ft_memchr((void *)s, 'x', sizeof(s)) == NULL);
+}
+
+int main(void)
+{
+	print_test_result("test_ft_memchr_success", test_ft_memchr_success());
+	print_test_result("test_ft_memchr_failure", test_ft_memchr_failure());
+    return (0);
+}
