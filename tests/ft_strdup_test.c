@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:41:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:18:49 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 05:34:19 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@
 
 #include "libft.h"
 #include "test_utils.h"
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 // ft_strdup must allocate memory and create a copy of the string pointed by s
 // and return a pointer to it.
