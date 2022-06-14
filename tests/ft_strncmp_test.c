@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmenezes <jhtohru@gmail.com>               +#+  +:+       +#+        */
+/*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:28:13 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 16:48:18 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 02:51:53 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include "test_utils.h"
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -40,3 +37,31 @@
 /* https://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+
+// ft_strncmp must return an integer greater than zero if s1 is greater than s2. 
+// ft_strncmp compares not more than n characters.
+int test_ft_strncmp_greater(void) {
+    return (ft_strncmp("abdef", "abcgh", 3) > 0);
+}
+
+// ft_strncmp must return an integer less than zero if s1 is less than s2. 
+// ft_strncmp compares not more than n characters.
+int test_ft_strncmp_less(void) {
+    return (ft_strncmp("abcgh", "abdef", 3) < 0);
+}
+
+// ft_strncmp must return zero if s1 is equal to s2. 
+// ft_strncmp compares not more than n characters.
+int test_ft_strncmp_equal(void) {
+    return (ft_strncmp("abdef", "abcgh", 2) == 0);
+}
+
+int main(void)
+{
+	print_test_result("test_ft_strncmp_greater", test_ft_strncmp_greater());
+	print_test_result("test_ft_strncmp_less", test_ft_strncmp_less());
+	print_test_result("test_ft_strncmp_equal", test_ft_strncmp_equal());
+}
