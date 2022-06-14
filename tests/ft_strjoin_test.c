@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:48:33 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:46:34 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 05:48:21 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// ft_strjoin allocates and returns a new string resulting from the
+// ft_strjoin must allocate and return a new string resulting from the
 // concatenation of s1 and s2.
 int test_ft_strjoin_success(void)
 {
