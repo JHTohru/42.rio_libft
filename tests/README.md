@@ -21,7 +21,7 @@
 |ft_toupper|OK|
 |ft_tolower|OK|
 |ft_strchr|OK|
-|ft_strrchr|Pending|
+|ft_strrchr|OK|
 |ft_strncmp|Pending|
 |ft_memchr|Pending|
 |ft_memcmp|Pending|
