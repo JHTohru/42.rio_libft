@@ -20,7 +20,7 @@
 |ft_strlcat|OK|
 |ft_toupper|OK|
 |ft_tolower|OK|
-|ft_strchr|Pending|
+|ft_strchr|OK|
 |ft_strrchr|Pending|
 |ft_strncmp|Pending|
 |ft_memchr|Pending|
