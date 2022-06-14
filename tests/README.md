@@ -31,7 +31,7 @@
 |ft_strdup|OK|
 |ft_substr|OK|
 |ft_strjoin|OK|
-|ft_strtrim|Pending|
+|ft_strtrim|OK|
 |ft_split|Pending|
 |ft_itoa|Pending|
 |ft_strmapi|Pending|
