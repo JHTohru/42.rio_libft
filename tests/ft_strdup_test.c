@@ -6,16 +6,13 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:41:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 05:16:46 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "test_utils.h"
-
-char	*ft_strdup(const char *s);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* char *strdup(const char *s)                                                */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -33,8 +30,33 @@ char	*ft_strdup(const char *s);
 /*                                                                            */
 /* SOURCE                                                                     */
 /*                                                                            */
-/* The Open Group Base Specifications Issue 6                                 */
-/* IEEE Std 1003.1, 2004 Edition                                              */
-/* https://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html       */
+/* The C Programming Language International Standard                          */
+/* Working draft — October 18, 2021 ISO/IEC 9899:202x (E)                     */
+/* https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf                 */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+#include <string.h>
+#include <stdlib.h>
+
+// ft_strdup must allocate memory and create a copy of the string pointed by s
+// and return a pointer to it.
+int test_ft_strdup(void)
+{
+    char    str[] = "abcde";
+    char    *dup;
+    int     res;
+
+    dup = ft_strdup(str);
+    res = strcmp(str, dup) == 0 && str != dup;
+    free(dup);
+    return (res);
+}
+
+int main(void)
+{
+	print_test_result("test_ft_strdup", test_ft_strdup());
+    return (0);
+}
