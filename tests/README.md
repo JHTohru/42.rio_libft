@@ -17,7 +17,7 @@
 |ft_memcpy|OK|
 |ft_memmove|OK|
 |ft_strlcpy|OK|
-|ft_strlcat|Pending|
+|ft_strlcat|OK|
 |ft_toupper|OK|
 |ft_tolower|OK|
 |ft_strchr|Pending|

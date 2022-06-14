@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:01:50 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 21:07:44 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 01:16:47 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,9 @@
 
 #include "libft.h"
 #include "test_utils.h"
+#include <string.h>
 
+// ft_strlcat must append the string src to the end of the string dst.
 int	test_ft_strlcat_regular(void)
 {
 	char	want[] = "abcdefghij";
@@ -68,14 +70,13 @@ int	test_ft_strlcat_regular(void)
 	return (strcmp(dst, want) == 0);	
 }
 
-// ft_strlcat will write no character in dst if there is no room for it.
+// ft_strlcat must write no character in dst if there is no room for it.
 int	test_ft_strlcat_no_write(void)
 {
 	char	odst[] = "abcde";
 	char	dst[] = "abcde";
 	char	src[] = "fghij";
 
-	strcpy(dst, src);
 	ft_strlcat(dst, src, sizeof(dst));
 	return (strcmp(dst, odst) == 0);
 }
@@ -91,20 +92,35 @@ int	test_ft_strlcat_truncation(void)
 	return (strcmp(dst, "abcdef") == 0);
 }
 
+// ft_strlcat must return the size of the string it attempted to create.
 int	test_ft_strlcat_return_regular(void)
 {
 	char	odst[] = "abcde";
 	char	src[] = "fghij";
-	char	dst[sizeof(odst) + sizeof(src) + 1];
+	char	dst[sizeof(odst) + sizeof(src) + 1] = "abcde";
 
-	strcpy(dst, odst);
-	return (ft_strlcat(dst, src, sizeof(dst)) == sizeof(odst) + sizeof(src));
+	return (ft_strlcat(dst, src, sizeof(dst)) == strlen(odst) + strlen(src));
 }
 
+// ft_strlcat must indicate that a truncation occurred returning a value greater
+// than or equal to the given size value.
 int	test_ft_strlcat_return_truncation(void)
 {
 	char	dst[10];
 	char	src[] = "abcdefghijklmnopqrstuvwyz";
 
 	return (ft_strlcat(dst, src, sizeof(dst)) >= sizeof(dst));
+}
+
+int	main(void)
+{
+	print_test_result("test_ft_strlcat_regular", test_ft_strlcat_regular());
+	print_test_result("test_ft_strlcat_no_write", test_ft_strlcat_no_write());
+	print_test_result("test_ft_strlcat_truncation",
+		test_ft_strlcat_truncation());
+	print_test_result("test_ft_strlcat_return_regular",
+		test_ft_strlcat_return_regular());
+	print_test_result("test_ft_strlcat_return_truncation",
+		test_ft_strlcat_return_truncation());
+	return (0);
 }
