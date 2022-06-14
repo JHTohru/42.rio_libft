@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:41:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:16:46 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 05:18:49 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ int test_ft_strdup(void)
     free(dup);
     return (res);
 }
+
+// ft_strdup must return null if no space can be allocated for the duplicated
+// string.
+// todo
 
 int main(void)
 {

@@ -28,7 +28,7 @@
 |ft_strnstr|Pending|
 |ft_atoi|Pending|
 |ft_calloc|OK|
-|ft_strdup|Pending|
+|ft_strdup|OK|
 |ft_substr|Pending|
 |ft_strjoin|Pending|
 |ft_strtrim|Pending|
