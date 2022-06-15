@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:43:43 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:37:36 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/14 19:23:16 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /*                                                                            */
 /* The ft_substr function allocates (with malloc(3)) and returns a substring  */
 /* from the string 's'. The substring begins at index 'start' and is of       */
-/* maximum size 'len'.                                                        */
+/* maximum length 'len                                                        */
 /*                                                                            */
 /*                                                                            */
 /* RETURN                                                                     */
