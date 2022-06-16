@@ -6,11 +6,12 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 02:23:01 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 10:58:35 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/16 10:45:47 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	count_tokens(const char *str, char c)
 {
