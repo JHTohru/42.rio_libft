@@ -33,7 +33,7 @@
 |ft_strjoin|OK|
 |ft_strtrim|OK|
 |ft_split|OK|
-|ft_itoa|Pending|
+|ft_itoa|OK|
 |ft_strmapi|Pending|
 |ft_striteri|Pending|
 |ft_putchar_fd|Pending|
