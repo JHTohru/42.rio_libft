@@ -26,7 +26,7 @@
 |ft_memchr|OK|
 |ft_memcmp|OK|
 |ft_strnstr|OK|
-|ft_atoi|Pending|
+|ft_atoi|OK|
 |ft_calloc|OK|
 |ft_strdup|OK|
 |ft_substr|OK|
