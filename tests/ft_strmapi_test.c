@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:58:49 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 11:02:36 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:16:40 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char    strtoupper(unsigned int i, char c)
+static char    strtoupper(unsigned int i, char c)
 {
     (void)i;
     return (toupper(c));
