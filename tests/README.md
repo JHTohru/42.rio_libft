@@ -35,7 +35,7 @@
 |ft_split|OK|
 |ft_itoa|OK|
 |ft_strmapi|OK|
-|ft_striteri|Pending|
+|ft_striteri|OK|
 |ft_putchar_fd|Pending|
 |ft_putstr_fd|Pending|
 |ft_putendl_fd|Pending|
