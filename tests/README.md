@@ -42,7 +42,7 @@
 |ft_putnbr_fd|Pending|
 |ft_lstnew|OK|
 |ft_lstadd_front|OK|
-|ft_lstsize|Pending|
+|ft_lstsize|OK|
 |ft_lstlast|Pending|
 |ft_lstadd_back|Pending|
 |ft_lstdelone|Pending|
