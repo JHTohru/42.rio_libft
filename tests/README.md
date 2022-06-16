@@ -40,7 +40,7 @@
 |ft_putstr_fd|Pending|
 |ft_putendl_fd|Pending|
 |ft_putnbr_fd|Pending|
-|ft_lstnew|Pending|
+|ft_lstnew|OK|
 |ft_lstadd_front|Pending|
 |ft_lstsize|Pending|
 |ft_lstlast|Pending|
