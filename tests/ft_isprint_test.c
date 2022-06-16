@@ -6,14 +6,9 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 11:19:04 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 17:43:19 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/15 23:51:05 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include "test_utils.h"
-#include <stdio.h>
-#include <string.h>
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -34,6 +29,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include "test_utils.h"
+#include <stdio.h>
+#include <string.h>
 
 // The ft_isprint must return true when the argument is a printing character
 // and false otherwise.
