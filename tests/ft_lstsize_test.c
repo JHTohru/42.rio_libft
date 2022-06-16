@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:32:56 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 11:53:17 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:56:30 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 #include "test_utils.h"
 #include <stdlib.h>
 
+// ft_lstsize must return the number of nodes in a list.
 int test_ft_lstsize(void)
 {
     t_list  *lst;
@@ -50,6 +51,7 @@ int test_ft_lstsize(void)
     return (res);
 }
 
+// ft_lstsize must handle a list containing a single node.
 int test_ft_lstsize_one(void)
 {
     t_list  *lst;
@@ -61,6 +63,7 @@ int test_ft_lstsize_one(void)
     return (res);
 }
 
+// ft_lstsize must handle a null pointer given as parameter.
 int test_ft_lstsize_zero(void)
 {
     return (ft_lstsize(NULL) == 0);
