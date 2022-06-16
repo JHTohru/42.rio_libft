@@ -13,3 +13,4 @@ ToDo:
 - Ajustar a parte bônus à definição do pdfs
 - Remover do Makefile as regras da libft-unit-test 
 - Revisar a porra toda. PDF, código, tudo!
+- Adicionar link pra libft nas funções da segunda parte e bônus
