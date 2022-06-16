@@ -46,6 +46,6 @@
 |ft_lstlast|OK|
 |ft_lstadd_back|OK|
 |ft_lstdelone|OK|
-|ft_lstclear|Pending|
+|ft_lstclear|OK|
 |ft_lstiter|Pending|
 |ft_lstmap|Pending|
