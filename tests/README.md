@@ -44,7 +44,7 @@
 |ft_lstadd_front|OK|
 |ft_lstsize|OK|
 |ft_lstlast|OK|
-|ft_lstadd_back|Pending|
+|ft_lstadd_back|OK|
 |ft_lstdelone|Pending|
 |ft_lstclear|Pending|
 |ft_lstiter|Pending|
