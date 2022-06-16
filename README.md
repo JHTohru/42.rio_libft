@@ -14,3 +14,5 @@ ToDo:
 - Remover do Makefile as regras da libft-unit-test 
 - Revisar a porra toda. PDF, código, tudo!
 - Adicionar link pra libft nas funções da segunda parte e bônus
+- Adicionar testes que verificam erro de alocação (malloc em ft_split precisa
+  falhar antes de alocar memória para o último token)
