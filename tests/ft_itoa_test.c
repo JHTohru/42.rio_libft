@@ -6,16 +6,13 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:56:53 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/16 10:49:36 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "test_utils.h"
-
-char	*ft_itoa(int n);
-
 /* ************************************************************************** */
+/*                                                                            */
+/* char *ft_itoa(int n)                                                       */
 /*                                                                            */
 /* DESCRIPTION                                                                */
 /*                                                                            */
@@ -36,3 +33,79 @@ char	*ft_itoa(int n);
 /* 42 Libft subject                                                           */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include "test_utils.h"
+#include <limits.h>
+#include <stdlib.h>
+#include <string.h>
+
+// ft_itoa must handle positive numbers.
+int test_ft_itoa_positive(void)
+{
+    char    *nbr;
+    int     res;
+
+    nbr = ft_itoa(42);
+    res = strcmp(nbr, "42") == 0;
+    free(nbr);
+    return (res);
+}
+
+// ft_itoa must handle negative numbers.
+int test_ft_itoa_negative(void)
+{
+    char    *nbr;
+    int     res;
+
+    nbr = ft_itoa(-42);
+    res = strcmp(nbr, "-42") == 0;
+    free(nbr);
+    return (res);
+}
+
+// ft_itoa must handle zero.
+int test_ft_itoa_zero(void)
+{
+    char    *nbr;
+    int     res;
+
+    nbr = ft_itoa(0);
+    res = strcmp(nbr, "0") == 0;
+    free(nbr);
+    return (res);
+}
+
+// ft_itoa must handle INT_MAX
+int test_ft_itoa_max(void)
+{
+    char    *nbr;
+    int     res;
+
+    nbr = ft_itoa(INT_MAX);
+    res = strcmp(nbr, "2147483647") == 0;
+    free(nbr);
+    return (res);
+}
+
+// ft_itoa must handle INT_MIN
+int test_ft_itoa_min(void)
+{
+    char    *nbr;
+    int     res;
+
+    nbr = ft_itoa(INT_MIN);
+    res = strcmp(nbr, "-2147483648") == 0;
+    free(nbr);
+    return (res);
+}
+
+int main(void)
+{
+	print_test_result("test_ft_itoa_positive", test_ft_itoa_positive());
+	print_test_result("test_ft_itoa_negative", test_ft_itoa_negative());
+	print_test_result("test_ft_itoa_zero", test_ft_itoa_zero());
+	print_test_result("test_ft_itoa_max", test_ft_itoa_max());
+	print_test_result("test_ft_itoa_min", test_ft_itoa_min());
+    return (0);
+}
