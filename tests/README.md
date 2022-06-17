@@ -36,8 +36,8 @@
 |ft_itoa|OK|
 |ft_strmapi|OK|
 |ft_striteri|OK|
-|ft_putchar_fd|Pending|
-|ft_putstr_fd|Pending|
+|ft_putchar_fd|OK|
+|ft_putstr_fd|OK|
 |ft_putendl_fd|Pending|
 |ft_putnbr_fd|Pending|
 |ft_lstnew|OK|
