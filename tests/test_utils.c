@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 09:45:10 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/17 01:30:29 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,26 @@ int	test_nomem(int (*fn)(void))
 	read(mypipe[0], &n, sizeof(n));
 	close(mypipe[0]);
 	return (n);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+char    *gen_filename(char *pref) // todo: review code
+{
+    char    *str;
+    size_t  rand;
+    int     rlen;
+
+    rlen = 0;
+    rand = -1;
+    while (rand > 0)
+    {
+        rand /= 10;
+        rlen++;
+    }
+    arc4random_buf((char *)&rand, sizeof(rand));
+    str = calloc(rlen + 1, sizeof(char));
+    sprintf(str, "%s%0*zu", pref, rlen, rand);
+    return (str);
 }
