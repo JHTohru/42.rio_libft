@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:40:56 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/17 00:13:16 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/17 17:55:36 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,12 @@ int test_ft_lstmap(void)
     res = strcmp(mlst->content, "ALPHA") == 0
         && strcmp(mlst->next->content, "BRAVO") == 0
         && strcmp(mlst->next->next->content, "CHARLIE") == 0;
+    free(lst->next->next->content);
+    free(lst->next->next);
+    free(lst->next->content);
+    free(lst->next);
+    free(lst->content);
+    free(lst);
     free(mlst->next->next->content);
     free(mlst->next->next);
     free(mlst->next->content);
