@@ -47,5 +47,5 @@
 |ft_lstadd_back|OK|
 |ft_lstdelone|OK|
 |ft_lstclear|OK|
-|ft_lstiter|Pending|
+|ft_lstiter|OK|
 |ft_lstmap|Pending|
