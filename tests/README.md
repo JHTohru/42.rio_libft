@@ -38,8 +38,8 @@
 |ft_striteri|OK|
 |ft_putchar_fd|OK|
 |ft_putstr_fd|OK|
-|ft_putendl_fd|Pending|
-|ft_putnbr_fd|Pending|
+|ft_putendl_fd|OK|
+|ft_putnbr_fd|OK|
 |ft_lstnew|OK|
 |ft_lstadd_front|OK|
 |ft_lstsize|OK|
