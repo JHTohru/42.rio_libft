@@ -104,8 +104,8 @@ int	test_ft_calloc_success(void)
 
 int	main(void)
 {
-	print_test_result("test_ft_calloc_nomem",
-		test_nomem(&test_ft_calloc_nomem));
+	// print_test_result("test_ft_calloc_nomem",
+	// 	test_nomem(&test_ft_calloc_nomem));
 	print_test_result("test_ft_calloc_overflow", test_ft_calloc_overflow());
 	print_test_result("test_ft_calloc_success", test_ft_calloc_success());
 	return (0);

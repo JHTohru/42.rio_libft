@@ -66,7 +66,7 @@ static void	read_tokens(char ***tokens, const char *str, char c)
 			if (*tokens[i] == NULL)
 			{
 				delete_tokens(tokens);
-				return (NULL);
+				return ;
 			}
 			i++;
 			start = NULL;
@@ -78,8 +78,6 @@ static void	read_tokens(char ***tokens, const char *str, char c)
 char	**ft_split(const char *str, char c)
 {
 	char		**tokens;
-	size_t		i;
-	const char	*start;
 
 	tokens = ft_calloc(count_tokens(str, c) + 1, sizeof(char *));
 	if (tokens != NULL)

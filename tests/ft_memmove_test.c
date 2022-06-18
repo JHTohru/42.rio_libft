@@ -56,13 +56,19 @@ int	test_ft_memmove_non_overlapping(void)
 // ft_memmove must handle overlapping memory areas.
 int	test_ft_memmove_overlapping_desc(void)
 {
-	char	str1[] = "abc";
-	char	str2[] = "abc";
+	char	str[] = "abc";
 
 
-	ft_memmove((void *)(str1 + 1), (void *)str1, 2);
-	ft_memmove((void *)str2, (void *)(str2 + 1), 2);
-	return (strcmp(str1, "aab") == 0 && strcmp(str2, "bcc") == 0);
+	ft_memmove((void *)(str + 1), (void *)str, 2);
+	return (strcmp(str, "aab") == 0);
+}
+
+int	test_ft_memmove_overlapping_asc(void)
+{
+	char	str[] = "abc";
+
+	ft_memmove((void *)str, (void *)(str + 1), 2);
+	return (strcmp(str, "bcc") == 0);
 }
 
 // ft_memmove must take no effect when the number of bytes to be moved is zero.
