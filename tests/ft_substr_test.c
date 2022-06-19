@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:43:43 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 19:23:16 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:07:26 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,24 @@ int test_ft_substr_zero_len(void)
     return (res);
 }
 
-// ft_substr must return null if it cannot allocate memory enough to hold the
-// substring.
-// todo
+// ft_substr must return null if memory allocation fails.
+int test_ft_substr_nomem(void)
+{
+    char    str[] = "abcde";
+    char    *sub;
+
+    simulate_malloc_failure();
+    sub = ft_substr(str, 2, 2);
+    free(sub);
+    reset_malloc();
+    return (sub == NULL);
+}
 
 int main(void)
 {
 	print_test_result("test_ft_substr_success", test_ft_substr_success());
 	print_test_result("test_ft_substr_late_start", test_ft_substr_late_start());
 	print_test_result("test_ft_substr_zero_len", test_ft_substr_zero_len());
+	print_test_result("test_ft_substr_nomem", test_ft_substr_nomem());
     return (0);
 }
