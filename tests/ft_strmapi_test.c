@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:58:49 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 11:16:40 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:22:52 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,26 +40,39 @@
 #include <stdlib.h>
 #include <string.h>
 
-static char    strtoupper(unsigned int i, char c)
+static char	strtoupper(unsigned int i, char c)
 {
-    (void)i;
-    return (toupper(c));
+	(void)i;
+	return (toupper(c));
 }
 
 // ft_strmapi must apply function f to each character of the input string.
-int test_ft_strmapi(void)
+int	test_ft_strmapi(void)
 {
-    char    *mstr;
-    int     res;
+	char	*mstr;
+	int		res;
 
-    mstr = ft_strmapi("alpha bravo charlie", &strtoupper);
-    res = strcmp(mstr, "ALPHA BRAVO CHARLIE") == 0;
-    free(mstr);
-    return (res);
+	mstr = ft_strmapi("alpha bravo charlie", &strtoupper);
+	res = strcmp(mstr, "ALPHA BRAVO CHARLIE") == 0;
+	free(mstr);
+	return (res);
 }
 
-int main(void)
+// ft_strmapi must return NULL if memory allocation fails.
+int	test_ft_strmapi_nomem(void)
+{
+	char	*mstr;
+
+	simulate_malloc_failure();
+	mstr = ft_strmapi("alpha bravo charlie", &strtoupper);
+	free(mstr);
+    reset_malloc();
+	return (mstr == NULL);
+}
+
+int	main(void)
 {
 	print_test_result("test_ft_strmapi", test_ft_strmapi());
-    return (0);
+	print_test_result("test_ft_strmapi_nomem", test_ft_strmapi_nomem());
+	return (0);
 }
