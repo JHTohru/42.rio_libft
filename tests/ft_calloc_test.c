@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 05:54:41 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 01:38:06 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 14:23:03 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,11 @@ int	test_ft_calloc_nomem(void)
 	size_t	len;
 	size_t	sz;
 
+	simulate_malloc_failure();
 	len = 42;
 	sz = 4;
 	s = ft_calloc(len, sz);
+	reset_malloc();
 	if (s == NULL)
 		return (1);
 	free(s);
@@ -104,8 +106,7 @@ int	test_ft_calloc_success(void)
 
 int	main(void)
 {
-	// print_test_result("test_ft_calloc_nomem",
-	// 	test_nomem(&test_ft_calloc_nomem));
+	print_test_result("test_ft_calloc_nomem", test_ft_calloc_nomem());
 	print_test_result("test_ft_calloc_overflow", test_ft_calloc_overflow());
 	print_test_result("test_ft_calloc_success", test_ft_calloc_success());
 	return (0);
