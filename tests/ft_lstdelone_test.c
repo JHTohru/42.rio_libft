@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:36:51 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 12:51:45 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:46:05 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,31 +32,20 @@
 #include "test_utils.h"
 #include <stdlib.h>
 
-void    *g_ptr = NULL;
-
-static void    del(void *s)
-{
-    g_ptr = s;
-}
-
 // ft_lstdelone must use the given del function to free the given node's content
 // and then free the node making no changes to its next node.
 int test_ft_lstdelone(void)
 {
-    char    content_a[] = "alpha";
     t_list  *node_a;
     t_list  *node_b;
-    int     res;
 
-    node_a = ft_lstnew(content_a);
-    node_b = ft_lstnew("bravo");
+    reset_memory_cnt();
+    node_a = ft_lstnew(ft_strdup("alpha")); // todo: use libc strdup once its memory allocation becames recorded
+    node_b = ft_lstnew(ft_strdup("bravo")); // todo: use libc strdup once its memory allocation becames recorded
     node_a->next = node_b;
-    ft_lstdelone(node_a, &del);
-    res = g_ptr == content_a;
-    // todo: check if node_a was freed.
-    // todo: check if node_b was not freed.
-    free(node_b);
-    return (res);
+    ft_lstdelone(node_a, &free);
+    ft_lstdelone(node_b, &free);
+    return (all_allocations_were_freed());
 }
 
 int main(void)
