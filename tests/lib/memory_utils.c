@@ -1,6 +1,9 @@
 #include <dlfcn.h>
 #include <stddef.h>
 
+// todo: make access to the following global variables restrict to this file
+// (I think a static keyword does the job).
+// todo: cover the other memory allocation functions (calloc, realloc, etc)
 int		malloc_must_fail = 0;
 int		nth_malloc_call_to_fail = -1;
 int		malloc_call_cnt = 0;
