@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:41:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:34:19 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:01:48 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@
 // and return a pointer to it.
 int test_ft_strdup(void)
 {
-    char    str[] = "abcde";
+    char    str[] = "foo";
     char    *dup;
     int     res;
 
@@ -55,12 +55,21 @@ int test_ft_strdup(void)
     return (res);
 }
 
-// ft_strdup must return null if no space can be allocated for the duplicated
-// string.
-// todo
+// ft_strdup must return null if memory allocation fails.
+int test_ft_strdup_nomem(void)
+{
+    char    str[] = "foo";
+    char    *dup;
+
+    simulate_malloc_failure();
+    dup = ft_strdup(str);
+    free(dup);
+    return (dup == NULL);
+}
 
 int main(void)
 {
 	print_test_result("test_ft_strdup", test_ft_strdup());
+	print_test_result("test_ft_strdup_nomem", test_ft_strdup_nomem());
     return (0);
 }
