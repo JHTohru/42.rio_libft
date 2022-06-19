@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:56:53 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 10:49:36 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:17:48 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,16 @@ int test_ft_itoa_min(void)
     return (res);
 }
 
+int test_ft_itoa_nomem(void)
+{
+    char    *nbr;
+
+    simulate_malloc_failure();
+    nbr = ft_itoa(42);
+    free(nbr);
+    return (nbr == NULL);
+}
+
 int main(void)
 {
 	print_test_result("test_ft_itoa_positive", test_ft_itoa_positive());
@@ -107,5 +117,6 @@ int main(void)
 	print_test_result("test_ft_itoa_zero", test_ft_itoa_zero());
 	print_test_result("test_ft_itoa_max", test_ft_itoa_max());
 	print_test_result("test_ft_itoa_min", test_ft_itoa_min());
+	print_test_result("test_ft_itoa_nomem", test_ft_itoa_nomem());
     return (0);
 }
