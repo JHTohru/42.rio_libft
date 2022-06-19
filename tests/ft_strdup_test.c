@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:41:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/19 15:01:48 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:05:12 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int test_ft_strdup_nomem(void)
     simulate_malloc_failure();
     dup = ft_strdup(str);
     free(dup);
+	reset_malloc();
     return (dup == NULL);
 }
 
