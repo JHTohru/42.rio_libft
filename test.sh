@@ -1,25 +1,26 @@
 #!/bin/sh
 
-testsdir="./tests"
+tests_dir="./tests"
 
 if [ -z "$1" ]
 then
-	tests=$(ls ${testsdir}/ft_*_test.c | xargs basename -s _test.c)
+	tests=$(ls $tests_dir/ft_*_test.c | xargs basename -s _test.c)
 	for test in ${tests//\\n/ }; do
 		./$0 "$test"
 	done
 	exit 0
 fi
 
-bindir="${testsdir}/bin"
-execfile="${bindir}/${1}_test"
-testfile="${testsdir}/${1}_test.c"
-auxfiles="${testsdir}/test_utils.c"
-libfile="./libft.a"
+tests_lib_dir="$tests_dir/lib"
+tests_bin_dir="$tests_dir/bin"
+exec_file="$tests_bin_dir/$1_test"
+test_file="$tests_dir/$1_test.c"
+tests_src_files="$tests_lib_dir/*.c"
+lib_file="./libft.a"
 
-mkdir -p "$bindir"
+mkdir -p "$tests_bin_dir"
 
-cc -Wall -Wextra -Werror -o "$execfile" \
-	-I "$testsdir" -I ./ \
-	"$testfile" "$auxfiles" "$libfile" \
-	&& "$execfile"
+cc -Wall -Wextra -Werror -o "$exec_file" \
+	-I "$tests_lib_dir" -I ./ \
+	$test_file $tests_lib_dir/*.c $lib_file \
+	&& "$exec_file"
