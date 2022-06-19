@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:56:53 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/19 15:17:48 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:21:35 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ int test_ft_itoa_nomem(void)
     simulate_malloc_failure();
     nbr = ft_itoa(42);
     free(nbr);
+    reset_malloc();
     return (nbr == NULL);
 }
 
