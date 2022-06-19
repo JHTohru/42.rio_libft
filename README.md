@@ -16,3 +16,4 @@ ToDo:
 - Adicionar link pra libft nas funções da segunda parte e bônus
 - Adicionar testes que verificam erro de alocação (malloc em ft_split precisa
   falhar antes de alocar memória para o último token)
+- Revisar taxonomia de test_utils (contanto o nome da lib)
