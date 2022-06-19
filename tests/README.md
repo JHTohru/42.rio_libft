@@ -32,7 +32,7 @@
 |ft_substr|OK|
 |ft_strjoin|OK|
 |ft_strtrim|OK|
-|ft_split|OK|
+|ft_split|Pending|
 |ft_itoa|OK|
 |ft_strmapi|OK|
 |ft_striteri|OK|
@@ -46,6 +46,6 @@
 |ft_lstlast|OK|
 |ft_lstadd_back|OK|
 |ft_lstdelone|OK|
-|ft_lstclear|OK|
+|ft_lstclear|Pending|
 |ft_lstiter|OK|
-|ft_lstmap|OK|
+|ft_lstmap|Pending|
