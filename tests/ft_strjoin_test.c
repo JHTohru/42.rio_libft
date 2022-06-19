@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:48:33 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 05:48:21 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:11:18 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,23 @@ int test_ft_strjoin_success(void)
     return (res);
 }
 
-// ft_strjoin returns NULL if the allocation fails.
-// todo
+// ft_strjoin must return NULL if memory allocation fails.
+int test_ft_strjoin_nomem(void)
+{
+    char    str1[] = "abcde";
+    char    str2[] = "fghij";
+    char    *cat;
+
+    simulate_malloc_failure();
+    cat = ft_strjoin(str1, str2);
+    free(cat);
+    reset_malloc();
+    return (cat == NULL);
+}
 
 int main(void)
 {
 	print_test_result("test_ft_strjoin_success", test_ft_strjoin_success());
+	print_test_result("test_ft_strjoin_nomem", test_ft_strjoin_nomem());
     return (0);
 }
