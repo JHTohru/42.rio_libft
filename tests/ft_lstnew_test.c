@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:15:12 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/16 11:31:02 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/19 15:26:24 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,22 @@ int test_ft_lstnew(void)
     return (res);
 }
 
-// ft_lstnew must return a null pointer if allocation fails.
-// todo
+// ft_lstnew must return NULL if memory allocation fails.
+int test_ft_lstnew_nomem(void)
+{
+    char    str[] = "lorem ipsum dolor sit amet";
+    t_list  *node;
+
+    simulate_malloc_failure();
+    node = ft_lstnew((void *)str);
+    free(node);
+    reset_malloc();
+    return (node == NULL);
+}
 
 int main(void)
 {
 	print_test_result("test_ft_lstnew", test_ft_lstnew());
+	print_test_result("test_ft_lstnew_nomem", test_ft_lstnew_nomem());
     return (0);
 }
