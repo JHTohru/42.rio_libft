@@ -55,23 +55,23 @@ static void	read_tokens(char ***tokens, const char *str, char c)
 	size_t		i;
 
 	i = 0;
-	start = NULL;
 	while (*str != '\0')
 	{
-		if (start == NULL && *str != c)
-			start = str;
-		else if (start != NULL && (*str == c || *str == '\0'))
+		while (*str == c && *str != '\0')
+			str++;
+		if (*str != '\0')
 		{
-			*tokens[i] = ft_substr(start, 0, str - start);
-			if (*tokens[i] == NULL)
+			start = str;
+			while (*str != c && *str != '\0')
+				str++;
+			(*tokens)[i] = ft_substr(start, 0, str - start);
+			if ((*tokens)[i] == NULL)
 			{
 				delete_tokens(tokens);
 				return ;
 			}
 			i++;
-			start = NULL;
 		}
-		str++;
 	}
 }
 
