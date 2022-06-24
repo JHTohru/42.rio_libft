@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 02:23:01 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/17 02:33:07 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/24 02:13:49 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,14 @@ static void	read_tokens(char ***tokens, const char *str, char c)
 			i++;
 		}
 	}
+	(*tokens)[i] = NULL;
 }
 
 char	**ft_split(const char *str, char c)
 {
 	char		**tokens;
 
-	tokens = ft_calloc(count_tokens(str, c) + 1, sizeof(char *));
+	tokens = malloc((count_tokens(str, c) + 1) * sizeof(char *));
 	if (tokens != NULL)
 		read_tokens(&tokens, str, c);
 	return (tokens);

@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 02:37:29 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/11 06:30:01 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/24 01:28:51 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	while (i < len && str[i] != '\0')
 		i++;
 	size = i + 1;
-	substr = (char *)ft_calloc(size, sizeof(char));
+	substr = (char *)malloc(size);
 	if (substr != NULL)
 		ft_strlcpy(substr, str, size);
 	return (substr);
