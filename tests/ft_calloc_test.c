@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 05:54:41 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/19 14:23:03 by jmenezes         ###   ########.fr       */
+/*   Updated: 2022/06/26 13:42:05 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,10 +104,20 @@ int	test_ft_calloc_success(void)
 	return (1);
 }
 
+// ft_calloc must be able to handle zero parameters values
+int	test_ft_calloc_zero(void)
+{
+	free(ft_calloc(0, 0));
+	free(ft_calloc(42, 0));
+	free(ft_calloc(0, 42));
+	return (1);
+}
+
 int	main(void)
 {
 	print_test_result("test_ft_calloc_nomem", test_ft_calloc_nomem());
 	print_test_result("test_ft_calloc_overflow", test_ft_calloc_overflow());
 	print_test_result("test_ft_calloc_success", test_ft_calloc_success());
+	print_test_result("test_ft_calloc_zero", test_ft_calloc_zero());
 	return (0);
 }
