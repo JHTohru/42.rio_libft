@@ -6,7 +6,7 @@
 /*   By: jmenezes <jmenezes@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 14:51:50 by jmenezes          #+#    #+#             */
-/*   Updated: 2022/06/14 00:54:58 by jmenezes         ###   ########.fr       */
+/*   Updated: 2023/02/11 05:46:07 by jmenezes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static int	ft_isspace(int c)
 
 int	ft_atoi(const char *nbr)
 {
-	int			sign;
-	long int	n;
+	int	sign;
+	int	n;
 
 	while (ft_isspace(*nbr))
 		nbr++;
